@@ -1,10 +1,13 @@
 ﻿#pragma once
+#include <iostream>
+
 class Monster
 {
 public:
 	Monster();
 	~Monster();
 
+	std::string Name;
 	int X;
 	int Y;
 	int Health;

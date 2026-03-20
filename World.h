@@ -9,5 +9,5 @@ public:
 	~World();
 
 	Player* MyPlayer;
-	Monster* MyMonster;
+	Monster* Monsters[3];
 };

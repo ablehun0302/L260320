@@ -3,6 +3,11 @@
 
 Monster::Monster()
 {
+	X = 0;
+	Y = 0;
+	Health = 10;
+	Damage = 2;
+	Gold = 3;
 }
 
 Monster::~Monster()
@@ -11,7 +16,7 @@ Monster::~Monster()
 
 void Monster::Move()
 {
-	std::cout << "몬스터가 움직인다." << std::endl;
+	std::cout << Name << "(이)가 움직인다." << std::endl;
 }
 
 void Monster::Attack()

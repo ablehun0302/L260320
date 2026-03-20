@@ -17,7 +17,9 @@ int main()
 	CurrentMonster->Move();*/
 
 	MyEngine.WorldInstance->MyPlayer->Move();
-	MyEngine.WorldInstance->MyMonster->Move();
+	MyEngine.WorldInstance->Monsters[0]->Move();
+	MyEngine.WorldInstance->Monsters[1]->Move();
+	MyEngine.WorldInstance->Monsters[2]->Move();
 
 	return 0;
 }

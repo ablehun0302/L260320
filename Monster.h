@@ -1,22 +1,21 @@
-﻿#pragma once
-#include <iostream>
+#pragma once
+#include "Actor.h"
 
-class Monster
+class AMonster : public AActor
 {
 public:
-	Monster();
-	~Monster();
+	AMonster();
+	~AMonster();
 
-	std::string Name;
-	int X;
-	int Y;
-	int Health;
-	int Damage;
-	int Gold;
+	void Die();
+	void Attack();
+	void Drop();
 
 	void Move();
-	void Attack();
-	void Dead();
-	void DropGold();
+
+	//int X;
+
+
+	int Gold;
 };
 

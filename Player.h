@@ -1,22 +1,17 @@
-﻿#pragma once
+#pragma once
+#include "Actor.h"
 
-class Monster;
-
-class Player
+class APlayer : public AActor
 {
 public:
-	Player();
-	~Player();
+	APlayer();
+	~APlayer();
 
-	int X;
-	int Y;
-	int Health;
-	int Damage;
-	int Gold;
-
-	void Move();
 	void Attack();
-	void Dead();
-	void PickUp();
+	void Collect();
+	void Die();
+	void Move();
+
+	int Gold;
 };
 

@@ -1,32 +1,16 @@
-﻿#include <iostream>
 #include "Monster.h"
+#include <iostream>
 
-Monster::Monster()
-{
-	X = 0;
-	Y = 0;
-	Health = 10;
-	Damage = 2;
-	Gold = 3;
-}
-
-Monster::~Monster()
+AMonster::AMonster()
 {
 }
 
-void Monster::Move()
-{
-	std::cout << Name << "(이)가 움직인다." << std::endl;
-}
-
-void Monster::Attack()
+AMonster::~AMonster()
 {
 }
 
-void Monster::Dead()
-{
-}
 
-void Monster::DropGold()
+void AMonster::Move()
 {
+	std::cout << "AMonster" << std::endl;
 }

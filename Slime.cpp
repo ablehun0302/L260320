@@ -1,10 +1,20 @@
-﻿#include "Slime.h"
+#include "Slime.h"
+#include <iostream>
 
-Slime::Slime()
+ASlime::ASlime()
 {
-	Monster::Name = "Slime";
+
 }
 
-Slime::~Slime()
+
+ASlime::~ASlime()
 {
+
+}
+
+void ASlime::Move()
+{
+	std::cout << "ASlime::";
+
+	AActor::Move();
 }

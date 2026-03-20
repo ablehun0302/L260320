@@ -1,13 +1,20 @@
-﻿#pragma once
-#include "Player.h"
-#include "Monster.h"
-
-class World
+#pragma once
+class UWorld
 {
 public:
-	World();
-	~World();
+	UWorld();
+	~UWorld();
 
-	Player* MyPlayer;
-	Monster* Monsters[3];
+	class APlayer* Player;
+
+	class AGoblin* Goblins;
+	class ASlime* Slimes;
+	class AWildBoar* WildBoars;
+
+	int PlayerCount = 0;
+	int GoblinCount = 0;
+	int SlimeCount = 0;
+	int WildBoarCount = 0;
+
 };
+

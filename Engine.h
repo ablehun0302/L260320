@@ -1,13 +1,22 @@
-﻿#pragma once
+#pragma once
+class UWorld;
 
-class World;
-
-class Engine
+class UEngine
 {
 public:
-	Engine();
-	~Engine();
+	UEngine();
+	~UEngine();
 
-	World* WorldInstance;
+	void Init();
+	void Run();
+	void Term();
+
+	void Input();
+	void Tick();
+	void Render();
+
+	UWorld* World;
+
+	bool bIsRunning;
 };
 

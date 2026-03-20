@@ -1,25 +1,46 @@
 ﻿#include <iostream>
 #include "Engine.h"
-#include "World.h"
+#include "Player.h"
+#include "WildBoar.h"
+#include "Goblin.h"
+#include "Slime.h"
 
 using namespace std;
 
 int main()
 {
-	Engine MyEngine;
+	srand(time(nullptr));
 
-	/*
-	World* CurrentWorld = MyEngine.WorldInstance;
-	Player* CurrentPlayer = CurrentWorld->MyPlayer;
-	Monster* CurrentMonster = CurrentWorld->MyMonster;
+	AWildBoar* WildBoar = nullptr;
+	AGoblin* Goblin = nullptr;
+	ASlime* Slime = nullptr;
 
-	CurrentPlayer->Move();
-	CurrentMonster->Move();*/
+	int WildBoarCount = rand() % 10 + 1;
+	int GoblinCount = rand() % 10 + 1;
+	int SlimeCount = rand() % 10 + 1;
 
-	MyEngine.WorldInstance->MyPlayer->Move();
-	MyEngine.WorldInstance->Monsters[0]->Move();
-	MyEngine.WorldInstance->Monsters[1]->Move();
-	MyEngine.WorldInstance->Monsters[2]->Move();
+	WildBoar = new AWildBoar[WildBoarCount];
+	Goblin = new AGoblin[GoblinCount];
+	Slime = new ASlime[SlimeCount];
+
+	for (int i = 0; i < WildBoarCount; i++)
+	{
+		WildBoar[i].Move();
+	}
+
+	for (int i = 0; i < GoblinCount; i++)
+	{
+		Goblin[i].Move();
+	}
+
+	for (int i = 0; i < SlimeCount; i++)
+	{
+		Slime[i].Move();
+	}
+
+	delete[] WildBoar;
+	delete[] Goblin;
+	delete[] Slime;
 
 	return 0;
 }

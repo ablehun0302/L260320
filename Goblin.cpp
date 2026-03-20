@@ -1,10 +1,17 @@
-﻿#include "Goblin.h"
+#include "Goblin.h"
+#include <iostream>
 
-Goblin::Goblin()
+AGoblin::AGoblin()
 {
-	Monster::Name = "Goblin";
 }
 
-Goblin::~Goblin()
+AGoblin::~AGoblin()
 {
+}
+
+void AGoblin::Move()
+{
+	std::cout << "AGoblin::";
+
+	AActor::Move();
 }

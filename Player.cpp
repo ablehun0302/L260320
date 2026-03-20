@@ -1,36 +1,30 @@
-﻿#include <iostream>
 #include "Player.h"
+#include <iostream>
 
-Player::Player()
+APlayer::APlayer()
 {
-	X = 0;
-	Y = 0;
-	Health = 10;
-	Damage = 3;
-	Gold = 0;
 }
 
-Player::~Player()
+APlayer::~APlayer()
 {
-
 }
 
-void Player::Move()
+void APlayer::Attack()
 {
-	std::cout << "플레이어가 움직인다." << std::endl;
 }
 
-void Player::Attack()
+void APlayer::Collect()
 {
-
 }
 
-void Player::Dead()
+void APlayer::Die()
 {
-
 }
 
-void Player::PickUp()
+void APlayer::Move()
 {
+	std::cout << "APlayer::";
 
+	//AActor::Move();
+	__super::Move();
 }
